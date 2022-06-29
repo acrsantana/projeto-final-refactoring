@@ -70,6 +70,10 @@ public class Engenheiro extends Funcionario {
     }
 
     @Override public String toString() {
-        return "Engenheiro{" + "numeroConselho='" + numeroConselho + '\'' + ", notaMestrado=" + notaMestrado + ", notaDoutorado=" + notaDoutorado + ", fluenteEmIngles=" + fluenteEmIngles + ", FATOR_BONUS=" + FATOR_BONUS + ", IDADE_LIMITE=" + IDADE_LIMITE + ", NOTA_APROVACAO_MESTRADO=" + NOTA_APROVACAO_MESTRADO + ", NOTA_APROVACAO_DOUTORADO=" + NOTA_APROVACAO_DOUTORADO + '}' + super.toString();
+        return "Engenheiro{" + "numeroConselho='" + numeroConselho + '\'' + ", notaMestrado=" +
+            notaMestrado + ", notaDoutorado=" + notaDoutorado + ", fluenteEmIngles=" +
+            fluenteEmIngles + ", FATOR_BONUS=" + FATOR_BONUS + ", IDADE_LIMITE=" +
+            IDADE_LIMITE + ", NOTA_APROVACAO_MESTRADO=" + NOTA_APROVACAO_MESTRADO + ", NOTA_APROVACAO_DOUTORADO=" +
+            NOTA_APROVACAO_DOUTORADO + '}' + super.toString();
     }
 }
