@@ -1,45 +1,24 @@
 package br.com.infnet.projetofinal.empresaAcme;
 
 abstract class Funcionario {
-    public static final int O = 1;
-    public static final int A = 2;
-    public static final int B = 3;
-    public static final int AB = 4;
+    protected Long matricula;
+    protected String nome;
+    protected String sobrenome;
+    protected int idade;
+    protected GrupoSanguineo grupoSanguineo;
+    protected Endereco endereco;
+    protected Contratacao contratacao;
 
-    public int grupoSanguineo;
-
-    public Funcionario(int grupoSanguineo) {
-        this.grupoSanguineo = grupoSanguineo;
+    public Funcionario() {
+        totalDeFuncionarios++;
     }
 
-    private String id;
-    private String nome;
-    private String sobrenome;
-    private Long tempoDeServicoEMAnos;
-
-    public String logradouro;
-    public String cidade;
-    public String numero;
-    public String cep;
-    public String bairro;
-
-
-    public String numeroConselho;
-
-    public Long getTempoDeServicoEMAnos() {
-        return tempoDeServicoEMAnos;
+    public Long getMatricula() {
+        return matricula;
     }
 
-    public void setTempoDeServicoEMAnos(Long tempoDeServicoEMAnos) {
-        this.tempoDeServicoEMAnos = tempoDeServicoEMAnos;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public void setMatricula(Long matricula) {
+        this.matricula = matricula;
     }
 
     public String getNome() {
@@ -57,7 +36,42 @@ abstract class Funcionario {
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
-    public abstract Double calculaBonusEngenheiro();
 
-    public abstract String getNumeroConselho();
+    public GrupoSanguineo getGrupoSanguineo() {
+        return grupoSanguineo;
+    }
+
+    public void setGrupoSanguineo(GrupoSanguineo grupoSanguineo) {
+        this.grupoSanguineo = grupoSanguineo;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public Contratacao getContratacao() {
+        return contratacao;
+    }
+
+    public void setContratacao(Contratacao contratacao) {
+        this.contratacao = contratacao;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    @Override public String toString() {
+        return "Funcionario{" + "matricula=" + matricula + ", nome='" + nome + '\'' + ", sobrenome='" + sobrenome + '\'' + ", idade=" + idade + ", grupoSanguineo=" + grupoSanguineo + ", endereco=" + endereco + ", contratacao=" + contratacao + '}';
+    }
+
+    public static int totalDeFuncionarios = 0;
 }
