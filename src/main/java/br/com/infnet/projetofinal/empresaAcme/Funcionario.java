@@ -13,6 +13,17 @@ abstract class Funcionario {
         totalDeFuncionarios++;
     }
 
+    public Funcionario(FuncionarioBuilder funcionarioBuilder) {
+        this.matricula = funcionarioBuilder.getMatricula();
+        this.nome = funcionarioBuilder.getNome();
+        this.sobrenome = funcionarioBuilder.getSobrenome();
+        this.idade = funcionarioBuilder.getIdade();
+        this.grupoSanguineo = funcionarioBuilder.getGrupoSanguineo();
+        this.endereco = funcionarioBuilder.getEndereco();
+        this.contratacao = funcionarioBuilder.getContratacao();
+        totalDeFuncionarios++;
+    }
+
     public Long getMatricula() {
         return matricula;
     }

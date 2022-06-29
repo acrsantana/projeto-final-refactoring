@@ -12,17 +12,11 @@ public class Engenheiro extends Funcionario {
     final int NOTA_APROVACAO_MESTRADO = 7;
     final int NOTA_APROVACAO_DOUTORADO = 5;
     public Engenheiro(EngenheiroBuilder engenheiroBuilder) {
+        super(engenheiroBuilder);
         this.numeroConselho = engenheiroBuilder.getNumeroConselho();
         this.notaMestrado = engenheiroBuilder.getNotaMestrado();
         this.notaDoutorado = engenheiroBuilder.getNotaDoutorado();
-        this.fluenteEmIngles = engenheiroBuilder.isFluenteEmIngles();
-        grupoSanguineo = engenheiroBuilder.getGrupoSanguineo();
-        contratacao = engenheiroBuilder.getContratacao();
-        endereco = engenheiroBuilder.getEndereco();
-        matricula = engenheiroBuilder.getMatricula();
-        nome = engenheiroBuilder.getNome();
-        sobrenome = engenheiroBuilder.getSobrenome();
-        idade = engenheiroBuilder.getIdade();
+        this.fluenteEmIngles = engenheiroBuilder.getFluenteEmIngles();
     }
     public boolean eMenorDe50Anos(){
         return getIdade() < IDADE_LIMITE;

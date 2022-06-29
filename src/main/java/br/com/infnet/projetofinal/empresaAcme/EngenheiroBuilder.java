@@ -1,7 +1,7 @@
 package br.com.infnet.projetofinal.empresaAcme;
 
-public class EngenheiroBuilder {
-    private Long matricula;
+public class EngenheiroBuilder implements FuncionarioBuilder{
+    private long matricula;
     private String nome;
     private String sobrenome;
     private int idade;
@@ -72,7 +72,7 @@ public class EngenheiroBuilder {
         return new Engenheiro(this);
     }
 
-    public Long getMatricula() {
+    public long getMatricula() {
         return matricula;
     }
 
@@ -112,7 +112,7 @@ public class EngenheiroBuilder {
         return notaDoutorado;
     }
 
-    public boolean isFluenteEmIngles() {
+    public boolean getFluenteEmIngles() {
         return fluenteEmIngles;
     }
 }

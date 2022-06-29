@@ -8,6 +8,13 @@ public class Vendedor extends Funcionario{
     private final int META_DE_VENDAS = 35;
     private final int META_DE_CURSOS = 3;
 
+    public Vendedor() {}
+    public Vendedor(VendedorBuilder vendedorBuilder) {
+        super(vendedorBuilder);
+        this.quantidadeDeVendas = vendedorBuilder.getQuantidadeDeVendas();
+        this.cursos = vendedorBuilder.getCursos();
+    }
+
     public List<Curso> getCursos() {
         return cursos;
     }
@@ -33,10 +40,10 @@ public class Vendedor extends Funcionario{
     }
 
     private boolean isMetaBatida() {
-        return quantidadeDeVendas > META_DE_VENDAS;
+        return getQuantidadeDeVendas() > META_DE_VENDAS;
     }
 
     @Override public String toString() {
-        return "Vendedor{" + "quantidadeDeVendas=" + quantidadeDeVendas + ", cursos=" + cursos + '}' + super.toString();
+        return "Vendedor{" + "quantidadeDeVendas=" + getQuantidadeDeVendas() + ", cursos=" + cursos + '}' + super.toString();
     }
 }
