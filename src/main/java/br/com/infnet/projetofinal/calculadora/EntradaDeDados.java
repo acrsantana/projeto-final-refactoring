@@ -17,8 +17,8 @@ public class EntradaDeDados {
         System.out.print("Digite y2: ");
         ponto2.setY(entrada.nextInt());
 
-        PlanoCartesiano calcula = new PlanoCartesiano(ponto1, ponto2);
-        System.out.println(calcula.formatarDistancia(calcula.calcularDistancia()));
+        PlanoCartesiano calcula = new PlanoCartesiano();
+        System.out.println("Distancia entre os pontos: " + calcula.formatarDistancia(calcula.calcularDistancia(ponto1, ponto2)));
 
     }
 }

@@ -4,15 +4,8 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class PlanoCartesiano {
-    Ponto ponto1;
-    Ponto ponto2;
 
-    public PlanoCartesiano(Ponto ponto1, Ponto ponto2) {
-        this.ponto1 = ponto1;
-        this.ponto2 = ponto2;
-    }
-
-    public double calcularDistancia(){
+    public double calcularDistancia(Ponto ponto1, Ponto ponto2){
         return Math.sqrt(Math.pow((ponto2.getX() - ponto1.getX()), 2) +  Math.pow((ponto2.getY() - ponto1.getY()), 2));
     }
 
